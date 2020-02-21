@@ -6,6 +6,8 @@ import thunk from 'redux-thunk'
 
 import { smurfsReducer } from '../state/reducers'
 
+import Smurfs from './Smurfs'
+
 const rootReducer = combineReducers({
   smurfs: smurfsReducer,
 })
@@ -18,6 +20,7 @@ function App() {
       <Provider store={store}>
         <div className='App'>
           <h1>SMURFS! 2.0 W/ Redux</h1>
+          <Smurfs />
         </div>
       </Provider>
     </ThemeProvider>
