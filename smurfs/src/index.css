@@ -15,3 +15,20 @@ h1 {
 .add-smurf {
   margin-left: 35%;
 }
+.smurfs-list {
+  display: flex;
+}
+
+.smurfs {
+  border: 1px solid black;
+  border-radius: 6px;
+  margin: 20px;
+  padding: 12px;
+  font-family: monospace;
+  font-size: 1.2rem;
+}
+
+.smurfs h2 {
+  font-family: 'JetBrains Mono';
+  text-decoration: underline;
+}

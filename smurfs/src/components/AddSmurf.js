@@ -45,7 +45,7 @@ const AddSmurf = ({ addSmurf }) => {
           onChange={handleChange}
         />
         <Button variantColor='teal' w={100} size='lg' onClick={handleSubmit}>
-          Submit
+          Add Smurf
         </Button>
       </Stack>
     </div>
