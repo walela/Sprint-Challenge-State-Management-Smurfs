@@ -4,7 +4,14 @@ import { Provider } from 'react-redux'
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 
-const store = createStore()
+import { smurfsReducer } from '../state/reducers'
+
+const rootReducer = combineReducers({
+  smurfs: smurfsReducer,
+})
+
+
+const store = createStore(rootReducer, applyMiddleware(thunk))
 class App extends Component {
   render() {
     return (
