@@ -10,20 +10,18 @@ const rootReducer = combineReducers({
   smurfs: smurfsReducer,
 })
 
-
 const store = createStore(rootReducer, applyMiddleware(thunk))
-class App extends Component {
-  render() {
-    return (
-      <ThemeProvider>
-        <Provider store={store}>
-          <div className='App'>
-            <h1>SMURFS! 2.0 W/ Redux</h1>
-          </div>
-        </Provider>
-      </ThemeProvider>
-    )
-  }
+
+function App() {
+  return (
+    <ThemeProvider>
+      <Provider store={store}>
+        <div className='App'>
+          <h1>SMURFS! 2.0 W/ Redux</h1>
+        </div>
+      </Provider>
+    </ThemeProvider>
+  )
 }
 
 export default App
