@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Button, Stack, Input } from '@chakra-ui/core'
 import { connect } from 'react-redux'
 import * as actions from '../state/actionCreators'
 import uuid from 'uuid'
@@ -32,19 +33,22 @@ const AddSmurf = ({ addSmurf }) => {
   }
 
   return (
-    <React.Fragment>
-      <div>
-        <label htmlFor='name'>Name</label>
-        <input type='text' id='name' name='name' value={name} onChange={handleChange} />
-        <label htmlFor='age'>Age</label>
-        <input type='number' id='age' name='age' value={age} onChange={handleChange} />
-        <label htmlFor='height'>Height</label>
-        <input type='text' id='height' name='height' value={height} onChange={handleChange} />
-        <button type='submit' onClick={handleSubmit}>
+    <div className="add-smurf">
+      <Stack spacing={3} w={360}>
+        <Input id='name' name='name' value={name} placeholder='Name' onChange={handleChange} />
+        <Input id='age' name='age' value={age} placeholder='Age' onChange={handleChange} />
+        <Input
+          id='height'
+          name='height'
+          value={height}
+          placeholder='Height'
+          onChange={handleChange}
+        />
+        <Button variantColor='teal' w={100} size='lg' onClick={handleSubmit}>
           Submit
-        </button>
-      </div>
-    </React.Fragment>
+        </Button>
+      </Stack>
+    </div>
   )
 }
 

@@ -20,7 +20,7 @@ function App() {
     <ThemeProvider>
       <Provider store={store}>
         <div className='App'>
-          <h1>SMURFS! 2.0 W/ Redux</h1>
+          <h1>The Smurfs!</h1>
           <AddSmurf />
           <Smurfs />
         </div>
