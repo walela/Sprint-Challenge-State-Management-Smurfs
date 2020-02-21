@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { ThemeProvider } from '@chakra-ui/core'
 import { Provider } from 'react-redux'
 import { createStore, combineReducers, applyMiddleware } from 'redux'
@@ -7,6 +7,7 @@ import thunk from 'redux-thunk'
 import { smurfsReducer } from '../state/reducers'
 
 import Smurfs from './Smurfs'
+import AddSmurf from './AddSmurf'
 
 const rootReducer = combineReducers({
   smurfs: smurfsReducer,
@@ -20,6 +21,7 @@ function App() {
       <Provider store={store}>
         <div className='App'>
           <h1>SMURFS! 2.0 W/ Redux</h1>
+          <AddSmurf />
           <Smurfs />
         </div>
       </Provider>
